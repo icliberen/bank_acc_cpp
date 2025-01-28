@@ -65,8 +65,7 @@ int main() {
         cout << "Choose an option: ";
         cin >> choice;
 
-        switch (choice) {
-        case 1: {
+        if (choice == 1) {
             // Create a new account
             cout << "Enter account holder's name: ";
             cin >> name;
@@ -89,10 +88,8 @@ int main() {
             else {
                 cout << "Account already exists.\n";
             }
-            break;
         }
-
-        case 2: {
+        else if (choice == 2) {
             // Deposit money into an existing account
             cout << "Enter account holder's name: ";
             cin >> name;
@@ -111,10 +108,8 @@ int main() {
             if (!found) {
                 cout << "Account not found.\n";
             }
-            break;
         }
-
-        case 3: {
+        else if (choice == 3) {
             // Withdraw money from an existing account
             cout << "Enter account holder's name: ";
             cin >> name;
@@ -133,10 +128,8 @@ int main() {
             if (!found) {
                 cout << "Account not found.\n";
             }
-            break;
         }
-
-        case 4: {
+        else if (choice == 4) {
             // Check the balance of an existing account
             cout << "Enter account holder's name: ";
             cin >> name;
@@ -153,17 +146,14 @@ int main() {
             if (!found) {
                 cout << "Account not found.\n";
             }
-            break;
         }
-
-        case 5:
+        else if (choice == 5) {
             // Exit the program
             cout << "Thank you for using the Bank Account System!\n";
             return 0;
-
-        default:
+        }
+        else {
             cout << "Invalid option. Please try again.\n";
-            break;
         }
     }
 }
